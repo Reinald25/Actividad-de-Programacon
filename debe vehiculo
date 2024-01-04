@@ -1,0 +1,71 @@
+clase principal (main)... pagina 1
+
+carro c1=new carro("Mazda", "2002", "156877526");
+        c1.setCilindraje("1.6");
+        System.out.println("Marca "+c1.marca);
+        System.out.println("Año "+c1.año);
+        System.out.println("Chasis "+c1.chasis);
+        System.out.println("Cilindraje "+c1.getCilindraje());
+        c1.reparacionPuertas();
+        
+        moto m1=new moto("Motor_1", "2023", "3658497269");
+        m1.setCilindraje("b150");
+        System.out.println("Marca "+m1.marca);
+        System.out.println("Año "+m1.año);
+        System.out.println("Chasis "+m1.chasis);
+        System.out.println("Cilindraje "+m1.getCilindraje());
+        m1.mantenimientoCadena();
+
+clase carro.... 
+
+public class carro extends vehiculo{
+
+    public carro(String marca, String año, String chasis) {
+        super(marca, año, chasis);
+    }
+
+    public carro() {
+    }
+    
+    public void reparacionPuertas(){
+        System.out.println("METODO");
+
+
+clase moto... pagina 3
+
+public class moto extends vehiculo{
+
+    public moto(String marca, String año, String chasis) {
+        super(marca, año, chasis);
+    }
+
+    public moto() {
+    }
+    
+    public void mantenimientoCadena(){
+        System.out.println("METODO");
+
+
+clase vehiculo... pagina 4
+
+public abstract class vehiculo {
+    String marca;
+    String año;
+    String chasis;
+    private String cilindraje;
+
+    public vehiculo(String marca, String año, String chasis ) {
+        this.marca = marca;
+        this.año = año;
+        this.chasis = chasis;
+    }
+
+    public vehiculo() {
+    }
+
+    public String getCilindraje() {
+        return cilindraje;
+    }
+
+    public void setCilindraje(String cilindraje) {
+        this.cilindraje = cilindraje;
